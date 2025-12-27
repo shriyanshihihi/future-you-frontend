@@ -21,7 +21,7 @@
 (async () => {
   const data = JSON.parse(sessionStorage.getItem("futureFormData"));
 
-  const res = await fetch("BACKEND_URL/generate-letter", {
+  const res = await fetch("https://future-you-backend.onrender.com/generate-letter", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
