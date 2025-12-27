@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Letter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="letter-page">
+
+  <div id="postcard" class="postcard">
+    <pre id="typedLetter"></pre>
+  </div>
+
+  <div class="actions">
+    <button onclick="downloadPostcard()">⬇ Download</button>
+    <button onclick="copyLetter()">📋 Copy</button>
+    <button onclick="shareLetter()">🔗 Share</button>
+  </div>
+
+  <button class="reset" onclick="startAgain()">Write another letter</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

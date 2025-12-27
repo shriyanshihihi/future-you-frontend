@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Future Self Is Writing…</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="writing-page">
+  <h2>Your future self is writing to you…</h2>
+
+  <div class="loading-box">
+    <div class="shimmer"></div>
+    <div class="shimmer"></div>
+    <div class="shimmer"></div>
+    <div class="shimmer"></div>
+  </div>
+</div>
+
+<script>
+(async () => {
+  const data = JSON.parse(sessionStorage.getItem("futureFormData"));
+
+  const res = await fetch("BACKEND_URL/generate-letter", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const json = await res.json();
+
+  if (!json.success) {
+    alert("Backend error: " + json.error);
+    window.location.href = "index.html";
+    return;
+  }
+
+  sessionStorage.setItem("generatedLetter", json.letter);
+  window.location.href = "letter.html";
+})();
+</script>
+
+</body>
+</html>

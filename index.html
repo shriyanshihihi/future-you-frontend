@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dear Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="page">
+  <section class="hero">
+    <div class="badge">✨ Time Travel Through Words</div>
+    <h1>Dear Me,</h1>
+    <p class="subtitle">This is a letter written by you — years from now.</p>
+    <p class="desc">Reflect on your present and receive a message from the person you'll become.</p>
+  </section>
+
+  <section class="card">
+    <form id="futureForm">
+      <div class="row">
+        <input id="name" placeholder="Your name" required />
+        <input id="age" type="number" placeholder="Your current age" required />
+      </div>
+
+      <label>What feels heavy in your life right now?</label>
+      <textarea id="struggle" placeholder="Career confusion, self-doubt, pressure…" required></textarea>
+
+      <label>A dream you rarely admit, even to yourself</label>
+      <textarea id="dream" placeholder="Something you secretly wish for…" required></textarea>
+
+      <label>How do you wish life feels in the future?</label>
+      <textarea id="hope" placeholder="Calm, confident, free, at peace…" required></textarea>
+
+      <input id="word" placeholder="One word that describes you today" required />
+      <input id="year" placeholder="A future year (e.g. 2035)" required />
+
+      <button type="submit">✨ Write my letter</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Your responses are processed privately and never stored.</p>
+    <p>Made with care • 2025</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
